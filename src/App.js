@@ -10,7 +10,8 @@ class App extends React.Component {
   state = {
     initialUsers: [],
     users: [],
-    searchingText: ''
+    searchingText: '',
+    alert: false
   }
 
   componentDidMount() {
@@ -29,7 +30,8 @@ class App extends React.Component {
     const users = this.state.initialUsers.filter(user => user.name.toLowerCase().includes(this.state.searchingText.toLowerCase().trim()));
     this.setState({
       users,
-      searchingText: ''
+      searchingText: '',
+      alert: users.length ? false : true
     })
   }
 
@@ -45,6 +47,7 @@ class App extends React.Component {
         <h1>Users list</h1>
         <Search searchingText={this.state.searchingText} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
         <UsersList users={this.state.users}/>
+        {this.state.alert && <p>No such a user!</p>}
       </div>
     );
   }
