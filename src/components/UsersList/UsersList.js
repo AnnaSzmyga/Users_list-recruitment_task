@@ -4,13 +4,13 @@ import User from '../User/User';
 import './UsersList.scss';
 
 
-const UsersList = () => {
+const UsersList = ({ users }) => {
   return (
-    <div className="users-list">
-      <User />
-      <User />
-      <User />
-    </div>
+    <ul className="users-list">
+      {
+          users.map(user => <User key={user.id} user={user}/>)
+      }
+    </ul>
   );
 }
 

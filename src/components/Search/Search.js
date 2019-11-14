@@ -1,10 +1,17 @@
 import React from 'react';
 import './Search.scss';
 
-const Search = () => {
+const Search = ({ searchingText, handleSubmit, handleChange }) => {
   return (
     <div className="search">
-      search
+      <form onSubmit={handleSubmit}>
+        <input
+            type="text"
+            placeholder="Search by user name..."
+            onChange={handleChange}
+            value={searchingText}
+        />
+      </form>
     </div>
   );
 }

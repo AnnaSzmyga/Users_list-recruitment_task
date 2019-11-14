@@ -1,11 +1,11 @@
 import React from 'react';
 import './User.scss';
 
-const User = () => {
+const User = ({ user }) => {
   return (
-    <div className="user">
-      user
-    </div>
+    <li className="user">{user.name}
+        <span>{`@${user.username}`}</span>
+    </li>
   );
 }
 
