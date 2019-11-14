@@ -1,0 +1,16 @@
+.search-form {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #000;
+    outline-color: #7c7979;
+
+    &::placeholder {
+        color: #c1bdbd;
+    }
+}

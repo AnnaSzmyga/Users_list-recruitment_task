@@ -41,7 +41,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <h1>Users list</h1>
         <Search searchingText={this.state.searchingText} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
         <UsersList users={this.state.users}/>
